@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="3" name="CryptoAPITests">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="EncryptDecryptBlockTest"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="3" name="KeyStorageTests">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="KeyUsage"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="3" name="CryptedStreamTests">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="CryptedStreamToMemory"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="2" failures="0" tests="3" name="PlatformHttpClientTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="testHttpClient">
+    <!-- message="qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method" type="qwarn" -->
+    <!-- message="qt.network.ssl: QSslSocket: cannot resolve SSLv2_server_method" type="qwarn" -->
+  </testcase>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err>
+<![CDATA[qt.network.ssl: QSslSocket: cannot resolve SSLv2_client_method]]>
+<![CDATA[qt.network.ssl: QSslSocket: cannot resolve SSLv2_server_method]]>
+  </system-err>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="3" name="PlatformXmlTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="testSelectSingleNode"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="9" name="PlatformJsonObjectTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="testGetNamedString"/>
+  <testcase result="pass" name="testGetNamedBool"/>
+  <testcase result="pass" name="testGetNamedObject"/>
+  <testcase result="pass" name="testStringify"/>
+  <testcase result="pass" name="testSetNamedString"/>
+  <testcase result="pass" name="testSetNamedObject"/>
+  <testcase result="pass" name="testSetNamedArray"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="5" name="PlatformJsonArrayTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="testGetStringAt"/>
+  <testcase result="pass" name="testAppendObject"/>
+  <testcase result="pass" name="testAppendString"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="5" name="PlatformFileSystemTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="testOpenLocalStorageFile"/>
+  <testcase result="pass" name="testDeleteLocalStorageFile"/>
+  <testcase result="pass" name="testQueryLocalStorageFiles"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="8" name="PlatformFileTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="testRead"/>
+  <testcase result="pass" name="testWrite"/>
+  <testcase result="pass" name="testClear"/>
+  <testcase result="pass" name="testReadAllAsText"/>
+  <testcase result="pass" name="testAppendText"/>
+  <testcase result="pass" name="testGetSize"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" tests="4" name="LicenseParserTest">
+  <properties>
+    <property value="5.7.0" name="QTestVersion"/>
+    <property value="5.7.0" name="QtVersion"/>
+    <property value="Qt 5.7.0 (x86_64&#x002D;little_endian&#x002D;lp64 shared (dynamic) release build; by GCC 4.9.1 20140922 (Red Hat 4.9.1&#x002D;10))" name="QtBuild"/>
+  </properties>
+  <testcase result="pass" name="initTestCase"/>
+  <testcase result="pass" name="test_UTF8_License"/>
+  <testcase result="pass" name="test_UTF16LE_License"/>
+  <testcase result="pass" name="cleanupTestCase"/>
+  <system-err/>
+</testsuite>
