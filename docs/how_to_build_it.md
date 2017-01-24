@@ -93,7 +93,7 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
   make
   ```
 
-Alternatively, you can open Qt Creator and build rms-sdk-for-cpp/sdk/sdk.pro and rms-sdk-for-cpp/samples/samples.pro from Qt Creator.
+  Alternatively, you can open Qt Creator and build rms-sdk-for-cpp/sdk/sdk.pro and rms-sdk-for-cpp/samples/samples.pro from Qt Creator.
 
 6. Run sample applications:
   ```
@@ -103,7 +103,7 @@ Alternatively, you can open Qt Creator and build rms-sdk-for-cpp/sdk/sdk.pro and
   ./rmsauth_sample	# auth sample
   ```
 
-Alternatively, you can run the sample application from Qt Creator.
+  Alternatively, you can run the sample application from Qt Creator.
 
 ## Create a tarball (to deploy apps):
 
@@ -133,8 +133,7 @@ Make sure that the PATH variable has the location of Qt 5.7
   sudo $HOME/linuxdeployqt/linuxdeployqt/linuxdeployqt rmsauth_sample
   ```
 
-If it throws errors that some files failed to copy, rerun the commands.
-
+  If it throws errors that some files failed to copy, rerun the commands.
 
 4. Move library files to lib directory
   ```
