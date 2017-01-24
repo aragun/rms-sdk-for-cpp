@@ -105,11 +105,12 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
 
   Alternatively, you can run the sample application from Qt Creator.
 
+
 ## Create a tarball (to deploy apps):
 
 1. Install Linuxdeployqt
-Follow the steps from this repo https://github.com/probonopd/linuxdeployqt
-Make sure that the PATH variable has the location of Qt 5.7
+  Follow the steps from this repo https://github.com/probonopd/linuxdeployqt
+  Make sure that the PATH variable has the location of Qt 5.7
   ```
   export PATH=$HOME/Qt/5.7/gcc_64/bin/:$PATH
   which qmake
@@ -137,7 +138,7 @@ Make sure that the PATH variable has the location of Qt 5.7
 
 4. Move library files to lib directory
   ```
-  sudo mv *.so /lib
+  sudo mv *.so lib
   ```
 
 5. Copy additional libraries from Qt
@@ -146,6 +147,12 @@ Make sure that the PATH variable has the location of Qt 5.7
   sudo cp -r $HOME/Qt/5.7/gcc_64/translations/qtwebengine* resources/.
   ```
 
+6. Create a tarball (to deploy apps)
+  ```
+  cd ..
+  tar czf deployed.tar.gz ./deployed
+  ```
+  
 ### OpenSUSE 13.2
 
 1. Install dev dependencies:
@@ -184,6 +191,7 @@ Make sure that the PATH variable has the location of Qt 5.7
   ./rms_sample	    # RMS sample
   ./rmsauth_sample	# auth sample
   ```
+  
 6. Create a tarball (to deploy apps):
   ```
   tar czf sample_apps.tar.gz ./rms_sample ./rmsauth_sample ./librmsauth.so ./librmsauthWebAuthDialog.so ./librms.so ./librmscrypto.so
