@@ -121,7 +121,7 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
 
 2. Copy libraries to new directory
   ```
-  mkdir deployed
+  mkdir deploy
   cp bin/rms_sample deploy/.
   cp bin/rmsauth_sample deploy/.
   cp bin/librms*.so deploy/.
@@ -129,7 +129,7 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
 
 3. Run linuxdeployqt
   ```
-  cd deployed
+  cd deploy
   sudo $HOME/linuxdeployqt/linuxdeployqt/linuxdeployqt rms_sample
   sudo $HOME/linuxdeployqt/linuxdeployqt/linuxdeployqt rmsauth_sample
   ```
@@ -143,14 +143,14 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
 
 5. Copy additional libraries from Qt
   ```
-  sudo cp -r $HOME/Qt/5.7/gcc_64/translations/qtwebengine* libexec/.
+  sudo cp resources/* libexec/.
   sudo cp -r $HOME/Qt/5.7/gcc_64/translations/qtwebengine* resources/.
   ```
 
 6. Create a tarball (to deploy apps)
   ```
   cd ..
-  tar czf deployed.tar.gz ./deployed
+  tar czf deploy.tar.gz ./deploy
   ```
   
 ### OpenSUSE 13.2
