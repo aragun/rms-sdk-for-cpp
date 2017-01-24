@@ -58,39 +58,44 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
   ```
 
 ### Ubuntu 14.04
-
-1. Install dev dependencies:
+1. Install Qt Creator. Select Desktop gcc 64-bit, Qt WebEngine, and Source in the installer prompt under Qt 5.7.
   ```
-  sudo apt-get install qt5-default
-  sudo apt-get install libqt5webkit5-dev
-  sudo apt-get install libqt5xmlpatterns5-dev
+  Open https://www.qt.io/download-open-source/
+  Download version 5.7 of Qt Creator and install it
+  ```
+
+2. Install dev dependencies:
+  ```
   sudo apt-get install libssl-dev
   sudo apt-get install libsecret-1-dev
   sudo apt-get install freeglut3-dev
   ```
 
-2. Clone this repo:
+3. Clone this repo:
   ```
   sudo apt-get install git
   git clone https://github.com/AzureAD/rms-sdk-for-cpp
   cd rms-sdk-for-cpp
+  git checkout feature/winport-evo
   ```
 
-3. Build libraries:
+4. Build libraries:
   ```
   cd sdk
   qmake
   make
   ```
 
-4. Build sample applications:
+5. Build sample applications:
   ```
   cd ../samples
   qmake
   make
   ```
 
-5. Run sample applications:
+Alternatively, you can open Qt Creator and build rms-sdk-for-cpp/sdk/sdk.pro and rms-sdk-for-cpp/samples/samples.pro from Qt Creator.
+
+6. Run sample applications:
   ```
   cd ../bin
   export LD_LIBRARY_PATH=`pwd`
@@ -98,9 +103,48 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
   ./rmsauth_sample	# auth sample
   ```
 
-6. Create a tarball (to deploy apps):
+Alternatively, you can run the sample application from Qt Creator.
+
+## Create a tarball (to deploy apps):
+
+1. Install Linuxdeployqt
+Follow the steps from this repo https://github.com/probonopd/linuxdeployqt
+Make sure that the PATH variable has the location of Qt 5.7
   ```
-  tar czf sample_apps.tar.gz ./rms_sample ./rmsauth_sample ./librmsauth.so ./librmsauthWebAuthDialog.so ./librms.so ./librmscrypto.so
+  export PATH=$HOME/Qt/5.7/gcc_64/bin/:$PATH
+  which qmake
+  $HOME/Qt/5.7/gcc_64/bin/qmake
+  qmake -v
+  Using Qt version 5.7.0 in $HOME/Qt/5.7/gcc_64/lib
+  ```
+
+2. Copy libraries to new directory
+  ```
+  mkdir deployed
+  cp bin/rms_sample deploy/.
+  cp bin/rmsauth_sample deploy/.
+  cp bin/librms*.so deploy/.
+  ```
+
+3. Run linuxdeployqt
+  ```
+  cd deployed
+  sudo $HOME/linuxdeployqt/linuxdeployqt/linuxdeployqt rms_sample
+  sudo $HOME/linuxdeployqt/linuxdeployqt/linuxdeployqt rmsauth_sample
+  ```
+
+If it throws errors that some files failed to copy, rerun the commands.
+
+
+4. Move library files to lib directory
+  ```
+  sudo mv *.so /lib
+  ```
+
+5. Copy additional libraries from Qt
+  ```
+  sudo cp -r $HOME/Qt/5.7/gcc_64/translations/qtwebengine* libexec/.
+  sudo cp -r $HOME/Qt/5.7/gcc_64/translations/qtwebengine* resources/.
   ```
 
 ### OpenSUSE 13.2
