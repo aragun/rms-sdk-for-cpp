@@ -57,6 +57,51 @@ Libs and samples have been successfully compiled on Windows and OSX as well, but
   rmsauth_sample.exe	# auth sample
   ```
 
+## Create a deployment folder
+Make sure you have the right Qt command prompt. It should be in Start Menu under Qt. 
+For 64 bit it is called Qt 5.7 64-bit for Desktop (MSVC 2015).
+For 32 bit it is called Qt 5.7 32-bit for Desktop (MSVC 2015).
+
+Note: The final location of this deployment directory must install visual studio tools
+
+1. Check that you have correct windeployqt. Inside Qt cmd:
+  ```
+  where windeployqt.exe
+  ```
+  For 64 bit C:\Qt\5.7\msvc2015_64\bin\windeployqt.exe
+  For 32 bit C:\Qt\5.7\msvc2015\bin\windeployqt.exe
+
+2. Go to where your sample apps were built.
+  ```
+  cd rms-sdk-for-cpp\
+  ```
+
+3. Copy executables and libraries to the deployment directory
+  ```
+  mkdir deploy
+  copy bin\rms*_sample.exe deploy\.
+  copy bin\rms*.dll deploy\.
+  ```
+
+4. Run windeployqt.exe
+  ```
+  cd deploy
+  windeployqt rms_sample.exe rmsauth_sample.exe rms.dll rmscrypto.dll rmsauth.dll rmsauthWebAuthDialog.dll
+  ```
+
+5. Copy Openssl libraries
+  For 64 bit
+  ```
+  copy C:\Windows\System32\ssleay32.dll .
+  copy C:\Windows\System32\libeay32.dll .
+  ```
+
+  For 32 bit
+  ```
+  copy C:\Windows\SysWOW64\ssleay32.dll .
+  copy C:\Windows\SysWOW64\libeay32.dll .
+  ```
+
 ### Ubuntu 14.04
 1. Install Qt Creator. Select Desktop gcc 64-bit, Qt WebEngine, and Source in the installer prompt under Qt 5.7.
   ```
