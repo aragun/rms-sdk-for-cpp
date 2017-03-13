@@ -1,6 +1,6 @@
 @echo off
 
-reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
+::reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
 
 ::Inside rms-sdk-for-cpp directory
 if exist deploy\ rd /q /s deploy\
