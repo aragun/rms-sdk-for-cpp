@@ -2,12 +2,11 @@
 
 set buildtarget= %1
 
-IF /I "%buildtarget= %"==amd64(
-	set windeploypath = msvc2015_64
-) ELSE (
- 	IF /I "%buildtarget= %"==x86(
-		set windeploypath = msvc2015
-	)
+IF /I "%buildtarget%"=="amd64" (
+	set windeployqtpath=msvc2015_64
+)
+IF /I "%buildtarget%"=="x86" (
+	set windeployqtpath=msvc2015
 )
 
 ::Inside rms-sdk-for-cpp directory
@@ -25,6 +24,6 @@ call copy third_party\lib\eay\ssleay32.dll rmsSdkDeploy\.
 call copy third_party\lib\eay\libeay32.dll rmsSdkDeploy\.
 
 call cd rmsSdkDeploy
-call C:\Qt\5.7\%buildtarget%\bin\windeployqt.exe rms.dll rmscrypto.dll
+call C:\Qt\5.7\%windeployqtpath%\bin\windeployqt.exe rms.dll rmscrypto.dll
 
 call cd ..
