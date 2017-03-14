@@ -1,6 +1,6 @@
 @echo off
 
-set buildtarget= %1
+set buildtarget=%1
 
 IF /I "%buildtarget%"=="amd64" (
 	set windeployqtpath=msvc2015_64
